@@ -5,6 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form components two</title>
+    <style>
+        table
+        {
+            margin-top: 20%;
+            box-shadow: 10px 5px 10px aqua;
+            padding: 30px;
+            word-spacing: 10px;
+            letter-spacing: 5px;
+        }
+        button
+        {
+            font-size: xx-large;
+        }
+        #one
+        {
+            color: white;
+            background-color: aquamarine;
+            border-radius: 10px;
+            border-color: aquamarine;
+        }
+        #one:hover
+        {
+            color: aquamarine;
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <form>
@@ -38,8 +64,8 @@
                     <td><input type="checkbox" name="optional" value="Updates"/>Future updates</td>
                 </tr>
                 <tr>
-                    <td><button>Signup</button></td>
-                    <td><button>Cancel</button></td>
+                    <td><button id="one">Signup</button></td>
+                    <td><button id="two">Cancel</button></td>
                 </tr>
             </tbody>
         </table>

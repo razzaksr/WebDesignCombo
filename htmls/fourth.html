@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
+    <style>
+        body{
+            background-color:aquamarine;
+        }
+        table
+        {
+            margin-left: 20%;
+            border: 10px;
+            border-top-style: dashed;
+            border-bottom-style: dotted;
+            border-left-style: groove;
+            border-right-style: initial;
+            text-align: center;
+            background-image: url("../images/fort3.jpg");
+            background-repeat: round;
+            font-family: 'Lucida Sans';
+        }
+        td{
+            color: blue;
+        }
+        th{
+            color: brown;
+        }
+        td:hover
+        {
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            text-decoration:line-through;
+            text-shadow: 2px 2px 2px tomato;
+        }
+    </style>
 </head>
 <body>
-    <table align="center" border="14px" cellspacing="10px" cellpadding="10px">
+    <!-- <table align="center" border="14px" cellspacing="10px" cellpadding="10px"> -->
+        <table cellspacing="10px" cellpadding="10px">
         <thead>
             <tr>
                 <th>Corporate Name</th>
@@ -17,7 +50,7 @@
                 <th>Corporate Type</th>
             </tr>
         </thead>
-        <tbody align="center" contenteditable="true">
+        <tbody>
             <tr>
                 <td>Infosys</td><td>2.3</td><td>Mysore</td>
                 <td>Java, DJango</td><td>Service</td>
