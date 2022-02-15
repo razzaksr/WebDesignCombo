@@ -23,6 +23,16 @@
             border-style: double;
         }
     </style> 
+    <script type="text/javascript">
+        function hai()
+        {
+            var tmp=document.getElementById('uma')
+            tmp.style.textTransform='uppercase'
+            tmp.style.backgroundColor='blue';
+            tmp.style.color='white';
+            tmp.style.borderRadius='50px';
+        }
+    </script>
 </head>
 <body>
     <h2>Vijay's favourite places</h2>
@@ -35,7 +45,7 @@
     <hr color="red"/>
     <h2>Dynamic web applications</h2>
     <ul type="disk">
-        <li>React</li>
+        <li id="uma" onclick="hai()">React</li>
         <li>Angular</li>
         <li>Vue</li>
         <li>Spring</li>
