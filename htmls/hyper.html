@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylings/common.css"/>
     <title>Hyper link</title>
+    <script>
+        window.onload=tech
+        window.onclick=tach
+        window.ondrag=tich
+        function tech()
+        {
+            const t=document.getElementById("uma")
+            t.style.backgroundColor='black'
+        }
+        function tach()
+        {
+            const t=document.getElementById("uma")
+            t.style.color='white'
+        }
+        function tich()
+        {
+            alert("Thanks for the visit")
+        }
+    </script>
 </head>
 <body>
     <a href="http://www.facebook.com" target="_blank">Salem</a>
@@ -17,7 +36,7 @@
         <a href="../htmls/basic.html">
             <img src="../images/fire1.jpg" alt="free fire" width="500px" height="300px"/>
         </a>
-        <img src="../images/fire3.jpg" alt="free fire" width="500px" height="300px"/>
+        <img target="_blank" onclick="window.location.assign('http://www.linkedin.com')" src="../images/fire3.jpg" alt="free fire" width="500px" height="300px"/>
     </div>
     <script>
         var hai=document.createElement('h1')
