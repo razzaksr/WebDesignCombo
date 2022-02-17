@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Introduction</title>
+    <script>
+        console.log("Script is working")
+        let hai=[]
+        let hello=new Array()
+        // push,pop,filter,map,length
+        hai.push(89)
+        hai.push("Razak")
+        hai.push(false)
+
+        hello.push("Zealous")
+        hello.push(99)
+        hello.push(8.9)
+        hello.push(1.2)
+        hello.push(true)
+        hello.push(12.9)
+
+        alert(hai.length+" "+hello.length)
+
+        //for(pos=0;pos<hai.length;pos++)
+        //{
+            //alert(hai[pos])
+        //}
+
+        //function yet(data,pos)
+        //{
+            //alert(data)
+        //}
+
+        //hello.map(yet)
+
+        hello.map((data)=>{
+            //alert(data)
+            //document.write("<h1>"+data+"</h1>")
+        })
+
+        hai.pop()
+        hai.pop(1)// pop always delete top element
+
+        //hai.map((da)=>{alert(da)})
+
+        var user=prompt("Tell us position to delete: ","")
+        hello=hello.filter((v,i)=>{
+            return v!==hello[user]
+        })
+        
+        alert("After deletion")
+        hello.map((data)=>{alert(data)})
+
+        
+    </script>
+    <noscript>
+        document.write("Javascript hasn't installed")
+    </noscript>
+</head>
+<body>
+    
+</body>
+</html>
