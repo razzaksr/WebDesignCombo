@@ -7,13 +7,21 @@
     <title>User interaction</title>
     <script src="../scripts/dishes.js"></script>
     <script>
-        //window.onload=begin
+        window.onload=begin
     </script>
 </head>
 <body>
     <div align="center">
         <input type="text" id="item" placeholder="Enter the item"/>
-        <button onclick="adding()" style="background-color: green;">Add</button>
+        <div>
+            <button onclick="adding()" style="background-color: green;">Add</button>
+            <button onclick="display()" style="background-color: yellow;margin-top: 4px;">View All</button>
+            <button onclick="er()" style="background-color: red;">Remove</button>
+        </div>
+
+        <div id="template">
+
+        </div>
     </div>
 </body>
 </html>

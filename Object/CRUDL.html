@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDL Try</title>
+    <script src="../scripts/oop.js"></script>
+    <script>
+        var h=new manage()
+        
+        var one=new Resources("Razak Mohamed S",["Java","Java script","Python","PHP","Dot net"],"Salem",20000)
+        var two=new Resources("Titus C",["C","Java"],"Salem",8000)
+        var three=new Resources("Annamalai",["Java","Python"],"Chennai",2000)
+        var four=new Resources("Sasi",["Python"],"Covai",2000)
+        var five=new Resources("Sabarinathan S",["Java","Dot net"],"Trichy",5000)
+        var six=new Resources("Murali",["C","Java"],"Chennai",3000)
+        var seven=new Resources("Maheshwaran",["Java","Python","PHP"],"Trichy",15000)
+
+
+        h.add(one)
+        h.add(two)
+        h.add(three)
+        h.add(four)
+        h.add(five)
+        h.add(six)
+        h.add(seven)
+
+        //h.display()
+        //h.byPerDay(10000)
+
+        h.upbyPos(2)
+
+        h.display()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
