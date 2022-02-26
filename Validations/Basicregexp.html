@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic regular expression</title>
+    <script>
+        const press=()=>{
+            let data=document.getElementById("num").value
+            let reg=new RegExp("[0-9]","g");// 0-9 includes any character along with that
+            //alert(reg.test(data))
+            document.getElementById("res").value=reg.test(data)+" tested ";
+
+            //let nm=document.getElementById("name").value
+            //reg=new RegExp("[A-Z]","g")// A-Z includes any numbers
+            //alert(reg.test(nm))
+
+            let p=document.getElementById("pin").value
+            reg=new RegExp("[^A-Za-z]","g")
+            alert(reg.test(p))
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num" placeholder="Enter the mobile number"/>
+    <input type="text" id="name" placeholder="Enter the full name"/>
+    <input type="text" id="pin" placeholder="Enter the pin number"/>
+    <input type="button" onclick="press()" value="validate"/>
+    <output id="res"></output>
+</body>
+</html>

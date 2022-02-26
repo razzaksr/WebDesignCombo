@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data validation on fields</title>
+    <script>
+        const validate=()=>{
+            let alpha=document.forms['hai'].fullname.value
+            //alert(""+(/^[A-Za-z]+$/).test(alpha)) // only alphabets excuding any character
+            
+            let mob=document.forms['hai'].mobile.value;
+            //alert(""+(/^[0-9]+$/).test(mob))// only numbers excluding any character
+
+            let em=document.forms['hai'].mail.value
+            //alert((/^(?=.*[0-9])(?=.+[@.])[A-Za-z0-9@.]/).test(em))
+
+            let ps=document.forms['hai'].pass.value
+            alert((/^(?=.*[0-9])(?=.*[$#@!*])[A-Za-z0-9@$#!*]{,7}/).test(ps))
+        }
+    </script>
+</head>
+<body>
+    <form name="hai">
+        <input type="text" name="fullname" placeholder="Full Name" />
+        <input type="tel" name="mobile" placeholder="Mobile number" />
+        <input type="email" name="mail" placeholder="Email address" />
+        <input type="text" name="pass" placeholder="PAssword please" />
+        <input type="button" value="Check" onclick="validate()"/>
+    </form>
+</body>
+</html>

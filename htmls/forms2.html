@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form components two</title>
+    <script src="../scripts/validations.js"></script>
     <style>
         table
         {
@@ -30,16 +31,20 @@
             color: aquamarine;
             background-color: white;
         }
+        span
+        {
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <form>
+    <form name="two" onsubmit="return perform()" action="#">
         <table align="center">
             <tbody>
                 <tr>
-                    <td>First name</td>
+                    <td><p>First name<span id="ferror"></span></p></td>
                     <td><input type="text" name="fname" placeholder="First Name"/></td>
-                    <td>Last name</td>
+                    <td><p>Last name<span id="lerror"></span></p></td>
                     <td><input type="text" name="lname" placeholder="Last Name"/></td>
                 </tr>
                 <tr>
@@ -47,7 +52,7 @@
                     <td><input type="date" name="dob" placeholder="Select DOB"/></td>
                 </tr>
                 <tr>
-                    <td>Select gender</td>
+                    <td><p>Select gender<span id="gerror"></span></p></td>
                     <td>
                         <input type="radio" name="gender" value="male" />male
                         <input type="radio" name="gender" value="female"/>Female
@@ -64,8 +69,10 @@
                     <td><input type="checkbox" name="optional" value="Updates"/>Future updates</td>
                 </tr>
                 <tr>
-                    <td><button id="one">Signup</button></td>
-                    <td><button id="two">Cancel</button></td>
+                    <!-- <td><button id="one">Signup</button></td>
+                    <td><button id="two">Cancel</button></td> -->
+                    <td><input type="submit" value="Send"/></td>
+                    <td><input type="reset" value="Clear"/></td>
                 </tr>
             </tbody>
         </table>
