@@ -1,0 +1,72 @@
+Data logic:
+
+array
+files
+localStorage
+
+Database server:
+
+relational database>> tables
+
+Derby
+Oracle
+MongoDb
+Postgres
+SQLite
+MS SQL
+MySQL>> Oracle
+	InnoDB
+	MariaDB
+	.....
+
+GUI tools:
+	Wampp
+	Xampp
+
+Database
+Tables
+columns>>
+	data types>> int, double, float, blob, lob, bigint, date, varchar,.....
+records
+
+
+Interactions/ Transactions/ Operations:
+Structured Query Language>> simple english line
+
+DDL: create,alter,truncate,drop
+DCL: grant, revoke
+DML: insert,update,delete
+DQL: select, joins
+
+CRUDL>> DML
+
+DDL:
+1. database creation:
+create DATABASE `sarathy`;
+
+2. table creation:
+create table `sarathy`.`drug`(dno int(4) not null, name varchar(255) not null, min int(4) not null, max int(4) not null, capacity int(4) not null, price double not null, expiry date(10) not null, mg int(4) not null)
+
+3. altering structure:
+ALTER TABLE `drug` CHANGE `dno` `drugno` INT(4) NOT NULL;
+
+ALTER TABLE `drug` ADD PRIMARY KEY(`drugno`);
+
+ALTER TABLE `drug` CHANGE `drugno` `drugno` INT(4) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `drug` CHANGE `min` `min` INT(4) NOT NULL DEFAULT '14', CHANGE `max` `max` INT(4) NOT NULL DEFAULT '50';
+
+DML:
+4. create record:
+INSERT INTO `drug` (`drugno`, `name`, `capacity`, `min`, `price`, `mg`, `max`, `expiry`) VALUES ('2201', 'cipla', '10', '14', '5', '250', '50', '2024-03-27'), (NULL, 'cold act', '20', '14', '6', '300', '50', '2023-03-22'), (NULL, 'Dolo', '20', '14', '4', '650', '50', '2022-03-29')
+
+DQL:
+5. fetching all records:
+SELECT * FROM `drug`
+
+DML:
+6. update:
+UPDATE drug set price=price-2 where mg>=150
+
+UPDATE `drug` SET `capacity` = '30', `min` = '6' WHERE `drug`.`drugno` = 2202
+
