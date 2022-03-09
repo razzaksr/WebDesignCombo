@@ -70,3 +70,58 @@ UPDATE drug set price=price-2 where mg>=150
 
 UPDATE `drug` SET `capacity` = '30', `min` = '6' WHERE `drug`.`drugno` = 2202
 
+7. Delete:
+delete from drug where drugno = 2201;
+
+DDL:
+8. truncate
+TRUNCATE drug;
+
+9. drop table:
+drop table drug;
+
+10. droping database:
+drop DATABASE sarathy;
+
+DQL:
+SELECT COLUMNS FROM TABLE WHERE CLAUSE
+all records:
+SELECT * FROM companies;
+
+11. fetching specific columns of all records:
+SELECT org,date,salary FROM `companies`;
+
+12. fetching non duplicates records of specific column based:
+SELECT DISTINCT org FROM `companies`;
+
+13. count of non duplicates records of specific column:
+SELECT count(DISTINCT org) FROM `companies`;
+
+14. count of records in the table:
+SELECT count(*) FROM `companies`;
+
+15. all columns of specific record:
+SELECT * from companies where org='wipro';
+
+16. all columns of conditional record:
+select * from companies where date > '2021-11-01';
+
+17. between:
+SELECT * FROM `companies` WHERE date between '2021-01-01' and '2021-05-01';
+
+18. max:
+SELECT max(salary),org,role,date FROM `companies`;
+
+19. like:
+SELECT * FROM `athlete` WHERE name like '%a';
+SELECT * FROM `athlete` WHERE `contact_no` like '8%';
+SELECT * FROM `athlete` WHERE name like '%ab%';
+
+20. order ascending:
+SELECT * FROM `athlete` ORDER by name;
+
+21. order descending:
+SELECT * FROM `athlete` ORDER by `weight` DESC;
+
+21. where + order:
+SELECT * FROM `athlete` WHERE `weight`>=70 ORDER by name DESC;
