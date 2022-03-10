@@ -125,3 +125,42 @@ SELECT * FROM `athlete` ORDER by `weight` DESC;
 
 21. where + order:
 SELECT * FROM `athlete` WHERE `weight`>=70 ORDER by name DESC;
+
+22. NOT:
+SELECT * FROM `contestants` WHERE NOT `weight` >= 70;
+
+23. AND:
+SELECT * FROM `student` WHERE `cgpa`>=7 AND `puc`>=80 AND skills like 'c%';
+
+24. OR:
+SELECT * FROM `student` WHERE `career`='Software' OR `skills` in ('java','python');
+
+25. AVG
+SELECT AVG(taken) FROM `companies`;
+
+26. SUM:
+SELECT SUM(taken) FROM `companies`;
+
+27. IN:
+SELECT * FROM `oneseven` WHERE `course` in ('Java','Python');
+
+SELECT `course`,`name` FROM `oneeight` WHERE `institution` in (select `institution` from oneeight where `finalpaid` = 'Paid');
+
+28. Limits:
+SELECT * FROM `oneseven` LIMIT 10;
+
+29. Wildcards:
+SELECT * FROM `oneseven` WHERE `name` like '%ab%';
+
+SELECT * FROM `oneseven` WHERE `name` like '%a__%';
+
+SELECT * FROM `oneseven` WHERE `name` like '_a%';
+
+SELECT * FROM `oneseven` WHERE `name` like '%_a_a%';
+
+30. Group by:
+SELECT * FROM `oneseven` WHERE `address` like '%salem%' GROUP BY `course`;
+
+31. foreign key:
+alter TABLE contestants add FOREIGN key (event) REFERENCES tournament(tournament_id);
+
