@@ -164,3 +164,24 @@ SELECT * FROM `oneseven` WHERE `address` like '%salem%' GROUP BY `course`;
 31. foreign key:
 alter TABLE contestants add FOREIGN key (event) REFERENCES tournament(tournament_id);
 
+32. Inner Join:
+SELECT contestants.name FROM `contestants` INNER JOIN tournament on event=tournament.tournament_id where event=2;
+
+SELECT * FROM `contestants` INNER JOIN tournament on event=tournament.tournament_id where event=2;
+
+33. left join:
+SELECT contestants.name,tournament.name,tournament.winner FROM `contestants` LEFT JOIN tournament on event=tournament.tournament_id where event>=3;
+
+34. join:
+SELECT * FROM `contestants` JOIN tournament on contestants.event=tournament.tournament_id where all GROUP by tournament.tournament_id;
+
+35. having:
+SELECT * FROM `contestants` HAVING weight>=70;
+
+SELECT * FROM `contestants` GROUP by event having event>=1;
+
+36. grant:
+CREATE USER 'hamsarj'@'localhost' IDENTIFIED VIA mysql_native_password USING '***';GRANT ALL PRIVILEGES ON *.* TO 'hamsarj'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0; 
+
+37. revoke:
+REVOKE ALL PRIVILEGES ON *.* FROM 'hamsarj'@'localhost'; REVOKE GRANT OPTION ON *.* FROM 'hamsarj'@'localhost'; GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, FILE, INDEX, ALTER, CREATE TEMPORARY TABLES, CREATE VIEW, EVENT, TRIGGER, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, EXECUTE ON *.* TO 'hamsarj'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0; 
